@@ -27,14 +27,14 @@
 
         Numpad_Nav_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &kp N7  &kp N8  &kp N9  &kp C_VOLUME_UP              &trans  &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &trans  &kp N4  &kp N5  &kp N6  &kp C_VOLUME_DOWN            &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp N1  &kp N2  &kp N3  &kp C_MUTE                   &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &kp N0  &trans                                       &trans    &trans    &trans     &trans  &trans
-                                &trans  &trans             &trans    &trans  &trans    &trans
-                                &trans  &trans             &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans             &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans             &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &kp N7  &kp N8  &kp N9  &kp C_BRIGHTNESS_INC            &kp C_VOLUME_UP    &kp HOME  &kp UP    &kp END    &trans  &trans
+&trans  &trans  &kp N4  &kp N5  &kp N6  &kp C_BRIGHTNESS_DEC            &kp C_VOLUME_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &trans                          &kp C_MUTE         &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &kp N0  &trans                                                     &trans    &trans    &trans     &trans  &trans
+                                &trans  &trans                &trans    &trans             &trans    &trans
+                                &trans  &trans                &trans    &trans             &trans    &trans
             >;
         };
 
@@ -83,7 +83,7 @@
 
 &trackball_peripheral_listener {
     input-processors =
-        // activate layer 3 within 500ms of the trackball moving,,,
+        // activate layer 3 within 500ms of the trackball moving,,,,
         <&zip_temp_layer 3 500>;
 };
 
@@ -91,10 +91,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,
         <&zip_xy_scaler 1 12>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
