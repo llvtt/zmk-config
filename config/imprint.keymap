@@ -83,7 +83,7 @@
 
 &trackball_peripheral_listener {
     // activate layer 3 within 500ms of the trackball moving
-    // <&zip_temp_layer 3 500>;
+    <&zip_temp_layer 3 500>;
 };
 
 //left hand trackball configuration
