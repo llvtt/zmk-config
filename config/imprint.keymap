@@ -47,6 +47,19 @@
 
             label = "DOUBLECLICK";
         };
+
+        triple_click: triple_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mkp MB1>,
+                <&macro_wait_time 100>,
+                <&mkp MB1>,
+                <&macro_wait_time 100>,
+                <&mkp MB1>;
+
+            label = "TRIPLE_CLICK";
+        };
     };
 
     keymap {
@@ -93,14 +106,14 @@
 
         Auto_Mouse_Layer {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &doubleclick            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans                                     &trans  &trans  &trans  &trans  &trans
-                                      &trans     &trans        &trans    &trans  &trans  &trans
-                                      &trans     &trans        &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &triple_click            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &doubleclick             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans                                      &trans  &trans  &trans  &trans  &trans
+                                      &trans     &trans         &trans    &trans  &trans  &trans
+                                      &trans     &trans         &trans    &trans  &trans  &trans
             >;
         };
 
@@ -136,7 +149,7 @@
 
 &trackball_peripheral_listener {
     input-processors =
-        // activate layer 3 within 500ms of the trackball moving,,,,,,,,,,,,,,,,,,,,,,,
+        // activate layer 3 within 500ms of the trackball moving,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_temp_layer 3 500>;
 };
 
@@ -144,10 +157,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
