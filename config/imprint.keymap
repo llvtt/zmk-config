@@ -67,27 +67,27 @@
 
         default_layer {
             bindings = <
-&lt 3 F1        &kp F2     &kp F3          &kp F4     &kp F5                      &kp F6                                   &kp F7  &kp F8                &kp F9             &kp F10   &kp F11                      &kp F12
-&kp EQUAL       &kp N1     &kp N2          &kp N3     &kp N4                      &kp N5                                   &kp N6  &kp N7                &kp N8             &kp N9    &kp N0                       &kp MINUS
-&kp TAB         &kp Q      &kp W           &kp E      &kp R                       &kp T                                    &kp Y   &kp U                 &kp I              &kp O     &kp P                        &kp BSLH
-&lt 2 ESC       &lt 2 A    &kp S           &kp D      &kp F                       &kp G                                    &kp H   &kp J                 &kp K              &kp L     &mt RIGHT_COMMAND SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z      &kp X           &kp C      &kp V                       &kp B                                    &kp N   &kp M                 &kp COMMA          &kp DOT   &kp FSLH                     &mo 4
-&kp LEFT        &kp RIGHT  &toggle_numpad  &kp GRAVE  &tapdance_capslock                                                           &capsword             &kp LBKT           &kp RBKT  &kp UP_ARROW                 &kp DOWN
-                                                      &mt LEFT_CONTROL BACKSPACE  &mt LEFT_COMMAND DELETE  &mo 1           &mo 1   &mt RIGHT_ALT RETURN  &kp SPACE
-                                                      &kp BACKSPACE               &kp DELETE               &kp LEFT_ALT    &tog 6  &kp RIGHT_COMMAND     &kp RIGHT_CONTROL
+&lt 3 F1        &kp F2     &kp F3          &kp F4     &kp F5                      &kp F6                                   &kp F7                    &kp F8                &kp F9             &kp F10   &kp F11                      &kp F12
+&kp EQUAL       &kp N1     &kp N2          &kp N3     &kp N4                      &kp N5                                   &kp N6                    &kp N7                &kp N8             &kp N9    &kp N0                       &kp MINUS
+&kp TAB         &kp Q      &kp W           &kp E      &kp R                       &kp T                                    &kp Y                     &kp U                 &kp I              &kp O     &kp P                        &kp BSLH
+&lt 2 ESC       &lt 2 A    &kp S           &kp D      &kp F                       &kp G                                    &kp H                     &kp J                 &kp K              &kp L     &mt RIGHT_COMMAND SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z      &kp X           &kp C      &kp V                       &kp B                                    &kp N                     &kp M                 &kp COMMA          &kp DOT   &kp FSLH                     &mo 4
+&kp LEFT        &kp RIGHT  &kt LEFT_SHIFT  &kp GRAVE  &tapdance_capslock                                                                             &capsword             &kp LBKT           &kp RBKT  &kp UP_ARROW                 &kp DOWN
+                                                      &mt LEFT_CONTROL BACKSPACE  &mt LEFT_COMMAND DELETE  &mo 1           &mo 1                     &mt RIGHT_ALT RETURN  &kp SPACE
+                                                      &kp BACKSPACE               &kp DELETE               &kp LEFT_ALT    &kp INT_KATAKANAHIRAGANA  &kp RIGHT_COMMAND     &kp RIGHT_CONTROL
             >;
         };
 
         symbols {
             bindings = <
-&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans     &trans                &trans                 &trans   &trans
-&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans     &trans                &trans                 &trans   &trans
-&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans     &trans                &trans                 &trans   &trans
-&trans  &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL  &trans            &trans  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT  &trans
-&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans     &trans                &trans                 &trans   &trans
-&trans  &trans           &trans            &trans             &trans                               &trans     &trans                &trans                 &trans   &trans
-                                                              &trans     &trans  &trans    &trans  &trans     &trans
-                                                              &trans     &trans  &trans    &trans  &trans     &trans
+&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans          &trans                &trans                 &trans             &trans
+&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans          &trans                &trans                 &trans             &trans
+&trans  &trans           &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PLUS   &trans            &trans  &kp UNDERSCORE  &trans                &trans                 &kp DOUBLE_QUOTES  &trans
+&trans  &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL  &trans            &trans  &kp MINUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT            &trans
+&trans  &trans           &trans            &trans             &trans     &trans            &trans  &trans          &trans                &trans                 &trans             &trans
+&trans  &trans           &trans            &trans             &trans                               &trans          &trans                &trans                 &trans             &trans
+                                                              &trans     &trans  &trans    &trans  &trans          &trans
+                                                              &trans     &trans  &trans    &trans  &trans          &trans
             >;
         };
 
@@ -106,14 +106,14 @@
 
         Keyboard_Control_Layer {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                  &kp K_PLAY_PAUSE  &trans           &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &trans           &trans           &trans
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans            &rgb_ug RGB_TOG  &rgb_ug RGB_EFF                    &trans           &trans           &trans
-&sys_reset   &trans        &trans        &trans        &trans        &trans                  &trans            &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                    &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
-&bootloader  &trans        &trans        &trans        &trans        &trans                  &trans            &rgb_ug RGB_HUD  &rgb_ug RGB_SAD                    &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &bootloader
-&to 0        &trans        &trans        &trans        &trans        &trans                  &trans            &trans           &trans                             &trans           &trans           &to 5
-&to 0        &trans        &trans        &trans        &trans                                                  &trans           &trans                             &trans           &trans           &to 5
-                                                       &trans        &trans        &trans    &trans            &trans           &trans
-                                                       &trans        &trans        &trans    &trans            &trans           &trans
+&trans       &trans        &kp C_REWIND  &kp C_FAST_FORWARD  &kp K_PREVIOUS  &kp K_NEXT              &kp K_PLAY_PAUSE  &trans           &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &trans           &trans           &tog 6
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_SEL 4            &trans            &rgb_ug RGB_TOG  &rgb_ug RGB_EFF                    &trans           &trans           &trans
+&sys_reset   &trans        &trans        &trans              &trans          &trans                  &trans            &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                    &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
+&bootloader  &trans        &trans        &trans              &trans          &trans                  &trans            &rgb_ug RGB_HUD  &rgb_ug RGB_SAD                    &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &bootloader
+&to 0        &trans        &trans        &trans              &trans          &trans                  &trans            &trans           &trans                             &trans           &trans           &to 5
+&to 0        &trans        &trans        &trans              &trans                                                    &trans           &trans                             &trans           &trans           &to 5
+                                                             &trans          &trans        &trans    &trans            &trans           &trans
+                                                             &trans          &trans        &trans    &trans            &trans           &trans
             >;
         };
 
@@ -166,10 +166,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
