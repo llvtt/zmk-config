@@ -160,7 +160,7 @@
 
 //right hand trackball configuration
 
-&trackball_peripheral_listener { input-processors = <&zip_temp_layer 4 500>; };
+&trackball_peripheral_listener { input-processors = <&zip_temp_layer 4 300>; };
 
 //left hand trackball configuration
 
