@@ -35,14 +35,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "EQUALS_CAPSLOCK";
             #binding-cells = <0>;
-            bindings = <&mod_tap_repeat LEFT_SHIFT EQUAL>, <&kp CAPSLOCK>;
+            bindings = <&mt LEFT_SHIFT EQUAL>, <&kp CAPSLOCK>;
         };
 
         bracket_capsword: bracket_capsword {
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET_CAPSWORD";
             #binding-cells = <0>;
-            bindings = <&mod_tap_repeat RIGHT_SHIFT LEFT_BRACKET>, <&caps_word>;
+            bindings = <&mt RIGHT_SHIFT LEFT_BRACKET>, <&caps_word>;
         };
 
         mod_tap_repeat: mod_tap_repeat {
@@ -184,10 +184,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
